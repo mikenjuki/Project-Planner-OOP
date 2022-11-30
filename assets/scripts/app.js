@@ -1,7 +1,19 @@
+class ToolTip {}
+
 class ProjectItem {}
 
-class ProjectList {}
+class ProjectList {
+  constructor(type) {
+    const prjItems = document.querySelectorAll(`#${type}-projects li`); 
+    console.log(prjItems);  
+  }
+}
 
-class App {}
+class App {
+  static init() {
+    const activeProjects = new ProjectList("active");
+    const finishedProjects = new ProjectList("finished");
+  }
+}
 
-class ToolTip {}
+App.init();
